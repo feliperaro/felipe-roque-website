@@ -69,7 +69,6 @@ header nav {
     flex-direction: column;
     height: 50vh;
     justify-content: center;
-    margin-bottom: 7.9vh;
     text-align: center;
 }
 
@@ -127,13 +126,12 @@ main section {
 }
 
 /* ABOUT ME */
-.about-me {
+.about-me-section {
     align-items: center;
     color: #272643;
     display: flex;
     flex-direction: column;
     height: auto;
-    padding-bottom: 5vh;
     width: 100%
 }
 .about-me-content {
@@ -145,10 +143,10 @@ main section {
 }
 
 /* CAREER */
-.my-career .section-title {
+.career-section .section-title {
     margin-bottom: 1vh;
 }
-.my-career {
+.career-section {
     align-items: center;
     background-color: #272643;
     color: #DAEDF7;
@@ -156,7 +154,7 @@ main section {
     width: 100%;
 }
 
-.my-career-content {
+.career-content {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -202,77 +200,80 @@ main section {
 }
 
 /* SKILLS */
-.my-skills {
+.skills-section {
     background-color: #272643;
     color: #DAEDF7;
     display: flex;
     padding-top: 5vh;
-    padding-bottom: 15vh;
+    padding-bottom: 20vh;
     width: 100%;
 }
 
-.my-skills-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.skills-content {
+    align-self: center;
+    display: grid;
+    grid-template-areas: 
+        "devops programming rpa"
+        "db soft web-mobile"
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5vh;
+    column-gap: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 80%;
 }
 
-.tech-skills {
+.skill-card {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding-left: 15vh;
-    width: auto;
+    gap: 3vh;
+    margin-bottom: 5vh;
 }
 
-.experience-language {
-    align-items: center;
+.skill-title {
+    font-size: 20px;
+}
+.skill-list {
+    align-self: center;
+    list-style: none;
+}
+.skill-item {
+    padding: 2px;
+    text-align: justify;
+}
+
+.skill-grid-item {
     display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-around;
 }
 
-.experience-unit {
-    align-items: center;
-    border-radius: 24px;
-    display: flex;
-    height: 30px;
-    justify-content: flex-start;
-    width: 300px;
+.devops-skills {
+    grid-area: "devops";
+}
+.programming-skills {
+    grid-area: "programming";
+}
+.rpa-skills {
+    grid-area: "rpa";
+}
+.db-skills {
+    grid-area: "db";
+}
+.soft-skills {
+    grid-area: "soft";
+}
+.web-mobile-skills {
+    grid-area: "web-mobile";
 }
 
-.experience-measure {
-    align-items: center;
-    background: rgb(6,142,177);
-    border-radius: 24px;
-    color: black;
-    display: flex;
-        
-    height: 30px;
-    justify-content: center;
-    text-align: center;
-    z-index: 999;
-}
-
-.measure-1 {
-    width: 33%;
-}
-
-.measure-2 {
-    width: 66%;
-}
-
-.measure-3 {
-    width: 100%;
-}
 
 /* CONTACT */
 .contact-me {
     color: #011627;
     width: 100%;
 }
-
 .contact-me-content {
     align-items: center;
     background-color: #E2F5FF;
@@ -330,11 +331,9 @@ hr.separator {
     font-size: 30px;
     padding: 5vh;
 }
-
 .form-send-message {
     display: flex;
     flex-direction: column;
-    /* width: 80%; */
     width: auto;
 }
 .form-send-message label  {
@@ -460,48 +459,118 @@ footer .social-medias a:active {
         padding: 3vh;
         width: auto;
     }
-
     .info {
         display: flex;
         flex-direction: column;
         width: 60%;
     }
-    
-    .contact-me-content span {
-        font-weight: 500;
-        font-size: 20px;
-    }
-    
     .info p {
         letter-spacing: 0.02rem;
         line-height: 1.1;
     }
-    
+
+    .contact-me-content span {
+        font-weight: 500;
+        font-size: 20px;
+    }
     .contact-me-button {
         width: auto;
     }
 
+    .form-container {
+        height: auto;
+        width: 80%;
+    }
+    .form-container form{
+        height: auto;
+        width: 100%;
+    }
     .message-container {
         width: 100%;
     }
-}
 
-
-
-@media screen and (max-width: 768px) {
-    .experience-language span {
-        font-size: 12px;
+    .skills-section {
+        height: auto;
+        padding: 0;
     }
-    .experience-unit {
-        height: 30px;
-    }
-    .measure-1 {
-        width: 30%;
-    } 
-    .measure-2 {
-        width: 60%;
-    }
-    .measure-3 {
+    .skills-content {
+        grid-template-areas: 
+            "devops"
+            "programming"
+            "rpa"
+            "db"
+            "soft" 
+            "web-mobile"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: auto;
+        row-gap: 0;
+        margin: 0;
         width: 90%;
     }
+    
+    .skill-grid-item {
+        align-items: center;
+        flex-direction: row;
+        gap: 5vh;
+        justify-content: center;
+        width: 60%;
+    }
+    .skill-card {
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    
+    .skill-title {
+        font-size: 20px;
+    }
+    .skill-list {
+        align-items: center;
+        list-style: none;
+        height: auto;
+        width: 40%;
+    }
+    .skill-item {
+        padding: 2px;
+        text-align: justify;
+    }
+
+    footer {
+        justify-content: center;
+        height: auto;
+        width: 100%;
+    }
+    footer .social-medias{
+        /* height: auto; */
+        display: none;
+    }
+    .top {
+        /* width: 80%; */
+        display: none;
+    }
+}
+
+/*for smooth scrolling*/
+html {
+    scroll-behavior: smooth;
+}
+.top {
+    --offset: 100px; 
+
+    bottom: 10px;      
+    margin-left: 15px; 
+    margin-top: calc(100vh + var(--offset));
+    place-self: end;
+    position: sticky;
+
+    /* visual styling */
+    background: #000;
+    border-radius: 100px;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    white-space: nowrap;
 }
