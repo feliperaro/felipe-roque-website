@@ -16,14 +16,14 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
+/*for smooth scrolling*/
+html {
+    scroll-behavior: smooth;
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
     background-color: #E3F6F5;
-}
-
-header {
-    height: auto;
 }
 
 header nav {
@@ -33,6 +33,25 @@ header nav {
     display: flex;
     height: 15vh;
     justify-content: space-around;
+}
+
+
+.top {
+    --offset: 100px; 
+
+    bottom: 10px;      
+    margin-left: 15px; 
+    margin-top: calc(100vh + var(--offset));
+    place-self: end;
+    position: sticky;
+
+    background: #000;
+    border-radius: 100px;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 10px;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
 .logo {
@@ -67,24 +86,20 @@ header nav {
     color: #011627;
     display: flex;
     flex-direction: column;
-    height: 50vh;
     justify-content: center;
     text-align: center;
 }
-
 .profile-intro h1 {
     font-size: 40px;
     font-weight: 800;
     margin: 5vh;
 }
-
 .profile-intro h2 {
     font-size: 30px;
     font-weight: 500;
     gap: 3vh;
     margin: 1vh;
 }
-
 .profile-intro .social-medias {
     display: flex;
     margin: 5vh;
@@ -115,14 +130,10 @@ header nav {
     font-size: 30px;
     font-weight: 500;
     justify-content: center;
-    margin: 5vh;
 }
 
 main section {
-    align-self: center;
-    display: flex;
     flex-direction: column;
-    width: 120vh;
 }
 
 /* ABOUT ME */
@@ -137,13 +148,14 @@ main section {
 .about-me-content {
     font-size: 24px;
     line-height: 1.4;
-    margin: 1vh 2vh 5vh 2vh;
+    padding-bottom: 5vh;
     text-align: justify;
     width: 50%;
 }
 
 /* CAREER */
 .career-section .section-title {
+    margin-top: 5vh;
     margin-bottom: 1vh;
 }
 .career-section {
@@ -153,7 +165,6 @@ main section {
     display: flex;
     width: 100%;
 }
-
 .career-content {
     align-items: center;
     display: flex;
@@ -163,7 +174,6 @@ main section {
     padding: 2vh;
     width: 55%;
 }
-
 .career-card {
     align-items: center;
     display: flex;
@@ -204,70 +214,53 @@ main section {
     background-color: #272643;
     color: #DAEDF7;
     display: flex;
-    padding-top: 5vh;
-    padding-bottom: 20vh;
     width: 100%;
 }
-
+.skills-section .section-title {
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
 .skills-content {
     align-self: center;
+    column-gap: 1vh;
     display: grid;
-    grid-template-areas: 
-        "devops programming rpa"
-        "db soft web-mobile"
-    ;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    row-gap: 5vh;
-    column-gap: 5vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    width: 80%;
+    width: 90%;
 }
-
 .skill-card {
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 1vh;
     margin-bottom: 5vh;
+    width: 90%;
 }
-
 .skill-title {
     font-size: 20px;
+    padding: 1vh;
 }
 .skill-list {
-    align-self: center;
+    display: flex;
+    flex-direction: column;
     list-style: none;
 }
 .skill-item {
-    padding: 2px;
+    align-items: center;
+    display: flex;
+    gap: 1vh;
     text-align: justify;
 }
 
+.skill-image {
+    height: 50px;
+    width: 45px;
+}
 .skill-grid-item {
     display: flex;
-    justify-content: space-around;
+    gap: 5vh;
+    justify-content: center;
+    width: auto;
 }
-
-.devops-skills {
-    grid-area: "devops";
-}
-.programming-skills {
-    grid-area: "programming";
-}
-.rpa-skills {
-    grid-area: "rpa";
-}
-.db-skills {
-    grid-area: "db";
-}
-.soft-skills {
-    grid-area: "soft";
-}
-.web-mobile-skills {
-    grid-area: "web-mobile";
-}
-
 
 /* CONTACT */
 .contact-me {
@@ -301,11 +294,9 @@ main section {
     letter-spacing: 0.05rem;
     line-height: 1.2;
 }
-
 hr.separator {
     border: 1px solid #E2F5FF;
 }
-
 .contact-me-button {
     background: #0A2A3C;
     border: none;
@@ -327,8 +318,8 @@ hr.separator {
     width: 380px;
 }
 .form-container span {
-    font-weight: 400;
     font-size: 30px;
+    font-weight: 400;
     padding: 5vh;
 }
 .form-send-message {
@@ -338,9 +329,9 @@ hr.separator {
 }
 .form-send-message label  {
     color: #203844;
-    text-align: start;
-    margin-bottom: 12px;
     font-weight: 500;
+    margin-bottom: 12px;
+    text-align: start;
 }
 .form-send-message input {
     margin-bottom: 20px;
@@ -359,13 +350,12 @@ footer {
     display: flex;
     justify-content: space-around;
     height: 15vh;
+    width: 100%;
 }
-
 footer .social-medias {
     display: flex;
     gap: 2vh;
 }
-
 footer .social-medias a:link {
     color: #95adbe;
 }
@@ -378,7 +368,6 @@ footer .social-medias a:hover {
 footer .social-medias a:active {
     color: #503a65;
 }
-
 .footer-content {
     display: flex;
     justify-content: center;
@@ -396,58 +385,72 @@ footer .social-medias a:active {
     margin: 0.5vh;    
 }
 
+@media only screen and (max-width: 1100px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr 0.5fr 0.5fr;
+        margin-bottom: 5vh;
+        row-gap: 1vh;
+        width: 45%;
+    }
+    .skill-grid-item {
+        align-items: center;
+        justify-content: space-around;
+        gap: 1vh;
+        width: 100%;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
-    .menu li {
-        display: none;
-    }
-    
     header nav {
-        display: flex;
         justify-content: space-evenly;
     }
+    .menu {
+        gap: 2vh;
+    }
+    .menu li {
+        font-size: 20px;
+    }
     .logo {
-        font-size: 30px;
+        font-size: 28px;
     }
-    .menu-icon {
-        display: flex;
-    }
-    
-    .main-content {
-        display: flex;
-        height: auto;
-        width: auto;
-    }
-    main section {
-        gap: 0;
+    .profile-intro {
         height: auto;
         margin: 0;
-        width: 80%;
     }
-    
-    .section-title {
-        margin: 3vh;
+    .profile-intro h1 {
+        font-size: 30px;
+        margin: 0;
+        margin-top: 5vh;
     }
-    
+    .profile-intro h2 {
+        font-size: 20px;
+    }
+    .profile-intro .social-medias {
+        gap: 1vh;
+        margin: 5vh 0 5vh 0;
+    }
     .about-me {
-        align-items: center;
-        flex-flow: row wrap;
         gap: 0;
         height: 100%;
         margin: 0;
         justify-content: center;
     }
     .about-me-content {
-        font-size: 20px;
+        font-size: 18px;
         gap: 0;
         margin-top: 0;
-        width: 80%;
     }
-    
+    .career-content {
+        margin-bottom: 0;
+    }
     .career-card {
         height: auto;
     }
-
+    .career-experience span {
+        line-height: 1.2;
+    }
     .contact-me-content {
         align-items: center;
         display: flex;
@@ -468,7 +471,47 @@ footer .social-medias a:active {
         letter-spacing: 0.02rem;
         line-height: 1.1;
     }
-
+    .skills-section {
+        height: auto;
+        padding: 0;
+    }
+    .skills-section .section-title {
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
+    
+    .skill-grid-item {
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0;
+        width: 50%;
+    }
+    .skill-card {
+        align-items: center;
+        padding-top: 5vh;
+        gap: 1vh;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .skill-title {
+        font-size: 20px;
+    }
+    .skill-list {
+        align-items: self-start;
+        justify-content: center;
+    }
+    .skill-item {
+        display: flex;
+        gap: 10px;
+        padding: 2px;
+        width: 100%;
+    }
+    .skill-item span {
+        text-align: justify;
+        height: auto;
+    }
     .contact-me-content span {
         font-weight: 500;
         font-size: 20px;
@@ -476,10 +519,10 @@ footer .social-medias a:active {
     .contact-me-button {
         width: auto;
     }
-
     .form-container {
         height: auto;
-        width: 80%;
+        padding: 1;
+        width: 60%;
     }
     .form-container form{
         height: auto;
@@ -488,89 +531,27 @@ footer .social-medias a:active {
     .message-container {
         width: 100%;
     }
-
-    .skills-section {
-        height: auto;
-        padding: 0;
+    
+    .footer-content {
+        display: none;
     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+
     .skills-content {
-        grid-template-areas: 
-            "devops"
-            "programming"
-            "rpa"
-            "db"
-            "soft" 
-            "web-mobile"
-        ;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        height: auto;
-        row-gap: 0;
-        margin: 0;
-        width: 90%;
+        grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        width: auto;
     }
-    
-    .skill-grid-item {
-        align-items: center;
-        flex-direction: row;
-        gap: 5vh;
-        justify-content: center;
-        width: 60%;
-    }
-    .skill-card {
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0;
-    }
-    
-    .skill-title {
-        font-size: 20px;
-    }
-    .skill-list {
-        align-items: center;
-        list-style: none;
-        height: auto;
-        width: 40%;
-    }
-    .skill-item {
-        padding: 2px;
-        text-align: justify;
-    }
-
-    footer {
-        justify-content: center;
-        height: auto;
-        width: 100%;
-    }
-    footer .social-medias{
-        /* height: auto; */
-        display: none;
-    }
-    .top {
-        /* width: 80%; */
-        display: none;
-    }
-}
-
-/*for smooth scrolling*/
-html {
-    scroll-behavior: smooth;
-}
-.top {
-    --offset: 100px; 
-
-    bottom: 10px;      
-    margin-left: 15px; 
-    margin-top: calc(100vh + var(--offset));
-    place-self: end;
-    position: sticky;
-
-    /* visual styling */
-    background: #000;
-    border-radius: 100px;
-    color: #fff;
-    font-family: sans-serif;
-    padding: 10px;
-    text-decoration: none;
-    white-space: nowrap;
 }

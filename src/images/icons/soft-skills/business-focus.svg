@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.73 254.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #2e3192;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 5.02px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle class="cls-1" cx="127.36" cy="127.36" r="127.36"/>
+      <g>
+        <circle class="cls-2" cx="126.75" cy="127.12" r="15.45"/>
+        <g>
+          <line class="cls-2" x1="127.33" y1="212.61" x2="127.33" y2="155.76"/>
+          <polyline class="cls-2" points="134.7 158.5 127.36 153.45 120.03 158.5"/>
+        </g>
+        <g>
+          <line class="cls-2" x1="212.61" y1="127.33" x2="155.76" y2="127.33"/>
+          <polyline class="cls-2" points="158.5 134.7 153.45 127.36 158.5 120.03"/>
+        </g>
+        <g>
+          <line class="cls-2" x1="42.12" y1="127.33" x2="98.97" y2="127.33"/>
+          <polyline class="cls-2" points="96.23 134.7 101.28 127.36 96.23 120.03"/>
+        </g>
+        <g>
+          <line class="cls-2" x1="127.33" y1="42.12" x2="127.33" y2="98.97"/>
+          <polyline class="cls-2" points="134.7 96.23 127.36 101.28 120.03 96.23"/>
+        </g>
+        <path class="cls-2" d="m116.91,78.63c-19.17,3.87-34.31,18.82-38.48,37.87"/>
+        <path class="cls-2" d="m175.08,116.5c-4.05-18.5-18.45-33.13-36.83-37.51"/>
+        <path class="cls-2" d="m138.25,175.24c18.34-4.37,32.73-18.95,36.81-37.4"/>
+        <path class="cls-2" d="m78.45,137.85c4.2,19,19.33,33.9,38.46,37.76"/>
+        <path class="cls-2" d="m116.91,47.9c-35.95,4.42-64.51,32.75-69.27,68.6"/>
+        <path class="cls-2" d="m205.87,116.5c-4.69-35.3-32.44-63.31-67.62-68.38"/>
+        <path class="cls-2" d="m138.25,206.11c35.14-5.07,62.87-33.02,67.6-68.27"/>
+        <path class="cls-2" d="m47.65,137.85c4.81,35.79,33.34,64.07,69.25,68.49"/>
+      </g>
+    </g>
+  </g>
+</svg>
