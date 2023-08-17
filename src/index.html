@@ -14,29 +14,28 @@
     <header>
         <nav>
             <a href="#" class="logo" id="logo">FRR</a>
-            <ul class="menu">
+            <ul class="nav-menu">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#career">CAREER</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="pages/articles/index.html">ARTICLES</a></li>
-                <li><a href="#contact-me">CONTACT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
-
-            <div class="menu-toggle">
-                <input type="checkbox"/>
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu-links">
-                  <a href="#"><li>HOME</li></a>
-                  <a href="#"><li>CAREER</li></a>
-                  <a href="#"><li>SKILLS</li></a>
-                  <a href="pages/articles/index.html"><li>ARTICLES</li></a>
-                  <a href="#"><li>CONTACT</li></a>
+            <!-- Hamburguer menu -->
+            <div class="nav-toggle">
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu">
+                    <a href="#home"><li>HOME</li></a>
+                    <a href="#career"><li>CAREER</li></a>
+                    <a href="#skills"><li>SKILLS</li></a>
+                    <a href="pages/articles/index.html"><li>ARTICLES</li></a>
+                    <a href="#contact"><li>CONTACT</li></a>
                 </ul>
             </div>
         </nav>
-
         <div class="profile-intro" id="home">
             <h1>Felipe Ramos Roque</h1>        
             <h2><em>Full-Stack Developer</em></h2>        
@@ -57,7 +56,6 @@
             </div>
         </div>
     </header>
-
     <main>
         <div class="main-content">
             <section class="about-me-section" id="about-me">
@@ -78,31 +76,31 @@
                                 <span>
                                     Full Stack Developer & RPA Solutions <a href="pages/frr-technology/index.html" target="_blank" rel="noopener noreferrer">@FRR Technology</a> (2022 - Present)
                                 </span>
-                                <p>Freelance Full Stack & RPA Developer. Building Python-based automations and full-stack web apps with React, Next.js, Python, AWS, and more. Seeking new challenges to create innovative solutions and embrace emerging technologies in dynamic projects.</p>
+                                <p>Full Stack Web & RPA Developer Freelancer. Building Python-based automations and full-stack web apps using React, Python, AWS, and more. Seeking for new challenges to create innovative solutions and embrace emerging technologies in dynamic projects.</p>
                             </li>
                             <li class="career-experience">
                                 <span>
                                     Dynamic English Course <a href="https://timesidiomas.com.br/" target="_blank" rel="noopener noreferrer">@Times Languages School</a> (2022 - 2024)
                                 </span>
-                                <p>Enrolled at Times to enhance English fluency, I'm focused on the four key language skills: listening, writing, reading, and speaking. This course equips me with comprehensive abilities to acquire a second language effectively.</p>        
+                                <p>Enrolled at Times Languages School to enhance English fluency, I'm focused on the four key language skills: listening, writing, reading, and speaking. This course helps me with comprehensive abilities to acquire a second language effectively.</p>        
                             </li>
                             <li class="career-experience">
                                 <span>
                                     Python RPA Analyst Developer <a href="https://cadmus.com.br/" target="_blank" rel="noopener noreferrer">@CADMUS</a> (2022)
                                 </span>
-                                <p>As a Python RPA Analyst Developer with Cadmus Automation and Innovation Team, I led development and deployment of automation solutions across HR, asset management, and finance teams. Transformed legacy projects, resolved bugs, created new automations and established coding patterns. Led a team of developers and interns, ensuring code quality and adherence to standards.</p>        
+                                <p>As a Python RPA Analyst Developer with Cadmus Automation and Innovation Team, I created and deployed a lot of RPA solutions across HR, asset management, and finance teams. Transformed legacy projects, fixings bugs, I created new automations with the team and established coding patterns. Led a team of developers and interns, ensuring code quality and adherence to standards.</p>        
                             </li>
                             <li class="career-experience">
                                 <span>
                                     Python RPA Developer <a href="http://www.bpatech.io/" target="_blank" rel="noopener noreferrer">@BPA</a> (2020 - 2022)
                                 </span>
-                                <p>Experienced in end-to-end Python automation, specializing in RPA projects across diverse sectors like finance, insurance, healthcare, logistics, and product management. Proficient in BPA framework, TDD, dashboards, and user support. Adept at problem-solving, code quality, teamwork, and utilizing various libraries including Selenium, Pandas, OpenCV, and APIs for successful RPA implementations.</p>        
+                                <p>Experienced in end-to-end Python automation, specializing in RPA projects across diverse sectors like finance, insurance, healthcare, logistics, and product management. Proficient in BPA framework, TDDs, dashboards, and user/client support. Adept at problem-solving, code quality, teamwork, self-management, using Python and RPA libraries including Selenium, Pandas, OpenCV, APIs and other tools for successful RPA implementations.</p>        
                             </li>
                             <li class="career-experience">
                                 <span>
                                     Analysis and Systems Development Completed <a href="http://fiap.com.br/" target="_blank" rel="noopener noreferrer">@FIAP</a> (2020 - 2021)
                                 </span>
-                                <p>Acquired skills in responsive web development with HTML, CSS, JavaScript. Proficient in Python, Java, OOP, Spring, Node.js, REST APIs, Oracle DB, MongoDB, Git, GitHub. Experienced in React Native for mobile apps. Adapted to teamwork and Agile methodologies, including Scrum.</p>        
+                                <p>I develop skills in responsive web development with HTML, CSS, JavaScript. Proficient in Python, Java, OOP, Spring, Node.js, REST APIs, Oracle DB, MongoDB, Git, GitHub. Experienced in React Native for mobile apps and Kotlin for Android. Adapted to teamwork and Agile methodologies, including Scrum.</p>        
                             </li>
                             <li class="career-experience">
                                 <span>
@@ -317,7 +315,7 @@
                     </div>
                 </div>
             </section>
-            <section class="contact-me" id="contact-me">
+            <section class="contact-section" id="contact">
                 <div class="contact-me-content">
                     <div class="info">
                         <span>Let's Talk!</span>
@@ -345,16 +343,15 @@
             </section>
         </div>
     </main>
-    
     <footer>
         <a href="" class="logo">FRR</a>
         <div class="footer-content">
-            <ul class="menu">
+            <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#career">Career</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="pages/articles/index.html">Articles</a></li>
-                <li><a href="#contact-me">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <div class="social-medias">
@@ -369,6 +366,6 @@
             </a>
         </div>
     </footer>
-    <a href="#" class="top">Back to Top &#8593;</a>
+    <a href="#" class="back-to-top">Back to Top &#8593;</a>
 </body>
 </html>
