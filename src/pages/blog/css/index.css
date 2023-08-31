@@ -9,7 +9,6 @@
   color: #BEFBFF;
 }
 
-
 /* Pagination */
 .blog-pagination {
   margin-bottom: 4rem;
@@ -17,7 +16,6 @@
 .blog-pagination > .btn {
   border-radius: 2rem;
 }
-
 
 /*
  * Blog posts
@@ -47,4 +45,22 @@
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+.blog-footer a:link {
+  color: #95adbe;
+}
+.blog-footer a:visited {
+  color: #95adbe;
+}
+.blog-footer a:hover {
+  color: #503a65;
+}
+.blog-footer a:active {
+  color: #503a65;
+}
+
+.img-thumbnail {
+  height: 200px;
+  width: 200px;
 }
